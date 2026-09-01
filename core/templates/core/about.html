@@ -1,0 +1,114 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Découvrez MEK INDUSTRIE : une équipe de 20 personnes qui accompagne ses clients de la conception à la maintenance de leurs projets industriels.">
+<meta name="theme-color" content="#004C8A">
+<title>À propos | MekIndustrie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body class="about-page">
+<header class="site-header">
+<a class="brand" href="{% url 'home' %}" aria-label="MekIndustrie accueil"><img src="{% static 'references/logo.png' %}" alt="MekIndustrie"></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+  <span></span><span></span><span></span>
+</button>
+<nav class="main-nav" aria-label="Navigation principale">
+<a href="{% url 'home' %}">{% trans "Accueil" %}</a>
+<a class="is-active" href="{% url 'about' %}">{% trans "À propos" %}</a>
+<a href="{% url 'home' %}#expertise">{% trans "Produits" %}</a>
+<a href="{% url 'contact' %}">{% trans "Contact" %}</a>
+</nav>
+<div class="header-tools">
+  <form action="{% url 'set_language' %}" method="post" class="language-switcher">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+    <button type="submit" name="language" value="fr" class="lang-btn {% if LANGUAGE_CODE == 'fr' %}active{% endif %}" aria-label="Français"><img src="{% static 'images/france-svgrepo-com.png' %}" alt="Français"></button>
+    <button type="submit" name="language" value="en" class="lang-btn {% if LANGUAGE_CODE == 'en' %}active{% endif %}" aria-label="English"><img src="{% static 'images/flag-for-flag-united-kingdom-svgrepo-com.png' %}" alt="English"></button>
+  </form>
+  <a class="header-cta" href="{% url 'contact' %}">{% trans "Contactez-nous" %} <span>→</span></a>
+</div>
+</header>
+
+<main>
+<section class="about-single section-wrap reveal">
+
+  <div class="about-tag reveal-up">Depuis 2016 — Tanger</div>
+  <h1 class="reveal-up">Qui<br><em>sommes-nous ?</em></h1>
+
+  <div class="about-lead-grid reveal-up">
+    <div class="about-text">
+      <p>La société MEK INDUSTRIE s'engage depuis plus de 4 ans à satisfaire les besoins de ses clients. Cette équipe d'une vingtaine de personnes, forte d'une longue expérience dans le domaine industriel, met tout en oeuvre pour offrir des produits et services de qualité, en innovant afin de répondre parfaitement à chaque besoin.</p>
+      <p>L'atout majeur de notre société est la maîtrise de l'ensemble de nos prestations, qui vont de l'étude à la mise au point, et de la fabrication au montage. Nous accompagnons nos clients dans l'ensemble des différentes étapes d'industrialisation de leurs produits, de la rédaction du cahier des charges à l'implantation dans leurs locaux.</p>
+    </div>
+    <div class="about-mini-stats">
+      <div><strong>10<span>+</span></strong><small>Années d'expérience</small></div>
+      <div><strong>20<span>+</span></strong><small>Collaborateurs</small></div>
+      <div><strong>15<span>+</span></strong><small>Partenaire de A à Z</small></div>
+    </div>
+  </div>
+
+  <div class="chain reveal-up">
+    <div class="chain-head"><span>Ce que nous assurons, sans interruption</span></div>
+    <div class="chain-grid">
+      <div class="chain-cell"><b>01</b><span>Conception</span></div>
+      <div class="chain-cell"><b>02</b><span>Fabrication</span></div>
+      <div class="chain-cell"><b>03</b><span>Livraison</span></div>
+      <div class="chain-cell"><b>04</b><span>Installation</span></div>
+      <div class="chain-cell"><b>05</b><span>Mise au point</span></div>
+      <div class="chain-cell"><b>06</b><span>Mise en route &amp; production</span></div>
+      <div class="chain-cell"><b>07</b><span>Garantie</span></div>
+      <div class="chain-cell"><b>08</b><span>Service après-vente</span></div>
+      <div class="chain-cell"><b>09</b><span>Maintenance</span></div>
+    </div>
+  </div>
+
+  <div class="about-cta reveal-up">
+    <p>Un seul interlocuteur, du cahier des charges à la maintenance.</p>
+    <a class="button button-primary" href="{% url 'contact' %}">Parler de votre projet <span>→</span></a>
+  </div>
+
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a class="brand" href="{% url 'home' %}"><img src="{% static 'references/logo.png' %}" alt="MekIndustrie"></a>
+            <p class="footer-copy">Ingénierie industrielle, avec précision. Nous concevons des solutions robustes, fiables et pensées pour la performance de vos installations.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <div class="footer-links">
+                <a href="{% url 'home' %}">Accueil</a>
+                <a href="{% url 'about' %}">À propos</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'home' %}#expertise">Produits</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="footer-contact">
+                <a href="tel:+213555123456">+213 (0) 555 12 34 56</a>
+                <a href="mailto:contact@mekindustrie.dz">contact@mekindustrie.dz</a>
+                <p>Z.I. Al Majd, Rue Riyad N°261 lot 890, Tanger 90060</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© {% now "Y" %} MekIndustrie</span>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'js/animations.js' %}"></script>
+</body>
+</html>

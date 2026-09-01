@@ -1,0 +1,151 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contactez MEK INDUSTRIE pour parler de votre projet industriel.">
+<title>Contact | MekIndustrie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body class="contact-page">
+<header class="site-header">
+<a class="brand" href="{% url 'home' %}" aria-label="MekIndustrie accueil"><img src="{% static 'references/logo.png' %}" alt="MekIndustrie"></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+  <span></span><span></span><span></span>
+</button>
+<nav class="main-nav" aria-label="Navigation principale">
+<a href="{% url 'home' %}">{% trans "Accueil" %}</a>
+<a href="{% url 'about' %}">{% trans "À propos" %}</a>
+<a class="is-active" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+<a href="{% url 'home' %}#expertise">{% trans "Produits" %}</a>
+</nav>
+<div class="header-right">
+  <form action="{% url 'set_language' %}" method="post" class="language-switcher">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+    <button type="submit" name="language" value="fr" class="lang-btn {% if LANGUAGE_CODE == 'fr' %}active{% endif %}" aria-label="Français"><img src="{% static 'images/france-svgrepo-com.png' %}" alt="Français"></button>
+    <button type="submit" name="language" value="en" class="lang-btn {% if LANGUAGE_CODE == 'en' %}active{% endif %}" aria-label="English"><img src="{% static 'images/flag-for-flag-united-kingdom-svgrepo-com.png' %}" alt="English"></button>
+  </form>
+  <a class="header-cta" href="{% url 'contact' %}">{% trans "Contactez-nous" %} <span>→</span></a>
+</div>
+</header>
+<main>
+<section class="contact-hero reveal"><div class="contact-hero-copy reveal-contact"><p class="eyebrow"><span></span> {% trans "Parlons de votre projet" %}</p><h1>{% trans "Un besoin." %}<br>{% trans "Une" %} <em>{% trans "solution." %}</em></h1><p>{% trans "Chaque projet commence par une conversation. Expliquez-nous votre contexte, nous vous aiderons à trouver la voie la plus juste." %}</p></div><div class="contact-hero-index reveal-contact">05 <span>{% trans "Contact" %}</span></div></section>
+<section class="contact-references reveal">
+  <div class="section-wrap">
+    <div class="section-kicker">02 <span>{% trans "Nos références" %}</span></div>
+    <div class="reference-marquee" aria-label="Nos références clients">
+      <div class="reference-track">
+        <div class="reference-group">
+          <img class="reference-logo" src="{% static 'references/alominium de maroc.png' %}" alt="Aluminium de Maroc">
+          <img class="reference-logo" src="{% static 'references/bamesa.jpg' %}" alt="Bamesa">
+          <img class="reference-logo" src="{% static 'references/ecol rental.png' %}" alt="Ecol Rental">
+          <img class="reference-logo" src="{% static 'references/electrical.jpg' %}" alt="Electrical">
+          <img class="reference-logo" src="{% static 'references/klaas-puul-since-1968.jpg' %}" alt="Klaas Puul">
+          <img class="reference-logo" src="{% static 'references/logo-industube-small.png' %}" alt="Industube">
+          <img class="reference-logo" src="{% static 'references/logo-plastex-1-500x128.png' %}" alt="Plastex">
+          <img class="reference-logo" src="{% static 'references/logo-prettl.webp' %}" alt="Prettl">
+        </div>
+        <div class="reference-group" aria-hidden="true">
+          <img class="reference-logo" src="{% static 'references/alominium de maroc.png' %}" alt="Aluminium de Maroc">
+          <img class="reference-logo" src="{% static 'references/bamesa.jpg' %}" alt="Bamesa">
+          <img class="reference-logo" src="{% static 'references/ecol rental.png' %}" alt="Ecol Rental">
+          <img class="reference-logo" src="{% static 'references/electrical.jpg' %}" alt="Electrical">
+          <img class="reference-logo" src="{% static 'references/klaas-puul-since-1968.jpg' %}" alt="Klaas Puul">
+          <img class="reference-logo" src="{% static 'references/logo-industube-small.png' %}" alt="Industube">
+          <img class="reference-logo" src="{% static 'references/logo-plastex-1-500x128.png' %}" alt="Plastex">
+          <img class="reference-logo" src="{% static 'references/logo-prettl.webp' %}" alt="Prettl">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-layout section-wrap reveal">
+<div class="contact-sidebar reveal-contact">
+<div class="section-kicker">01 <span>{% trans "Nous sommes à votre écoute" %}</span></div>
+<h2>{% trans "Construisons" %}<br>{% trans "la suite" %} <em>{% trans "ensemble." %}</em></h2>
+<p>{% trans "Notre équipe vous répond sous 48 heures pour qualifier votre besoin et vous proposer un premier échange." %}</p>
+<div class="contact-info-list">
+<div class="reveal">
+<small>{% trans "Téléphone" %}</small>
+<a href="tel:+213555123456">+213 (0) 555 12 34 56 <span>↗</span></a>
+</div>
+<div class="reveal">
+<small>{% trans "Email" %}</small>
+<a href="mailto:contact@mekindustrie.dz">contact@mekindustrie.dz <span>↗</span></a>
+</div>
+<div class="reveal">
+<small>{% trans "Atelier" %}</small>
+<strong>Z.I. Al Majd, Rue Riyad N°261 lot 890<br>Tanger 90060, Maroc</strong>
+</div>
+</div>
+</div>
+<div class="contact-panel reveal-contact">
+<div class="contact-panel-top">
+<span>{% trans "Votre projet" %}</span>
+<span>{% trans "Étape" %} 01 / 01</span>
+</div>
+<form class="contact-form contact-form-large">
+<label>
+{% trans "Votre nom" %}
+<input type="text" name="name" placeholder="{% trans 'Nom et prénom' %}" required>
+</label>
+<label>
+{% trans "Votre email" %}
+<input type="email" name="email" placeholder="nom@entreprise.com" required>
+</label>
+<label>
+{% trans "Votre entreprise" %}
+<input type="text" name="company" placeholder="{% trans 'Nom de votre entreprise' %}">
+</label>
+<label>
+{% trans "Votre message" %}
+<textarea name="message" rows="5" placeholder="{% trans 'Parlez-nous de votre besoin, de vos délais et de vos objectifs...' %}" required></textarea>
+</label>
+<button class="button button-primary" type="submit">{% trans "Envoyer ma demande" %} <span>→</span></button>
+</form>
+<p class="form-note">{% trans "Vos informations restent confidentielles et sont utilisées uniquement pour vous répondre." %}</p>
+</div>
+</section>
+\
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a class="brand" href="{% url 'home' %}"><img src="{% static 'references/logo.png' %}" alt="MekIndustrie"></a>
+            <p class="footer-copy">Ingénierie industrielle, avec précision. Nous concevons des solutions robustes, fiables et pensées pour la performance de vos installations.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <div class="footer-links">
+                <a href="{% url 'home' %}">Accueil</a>
+                <a href="{% url 'about' %}">À propos</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'home' %}#expertise">Produits</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="footer-contact">
+                <a href="tel:+213555123456">+213 (0) 555 12 34 56</a>
+                <a href="mailto:contact@mekindustrie.dz">contact@mekindustrie.dz</a>
+                <p>Z.I. Al Majd, Rue Riyad N°261 lot 890, Tanger 90060</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2025 MekIndustrie</span>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'js/animations.js' %}"></script>
+</body>
+</html>

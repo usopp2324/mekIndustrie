@@ -1,0 +1,462 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MekIndustrie, partenaire industriel en structures aluminium, machines spéciales, usinage et automatisme en Algérie.">
+<title>MekIndustrie | Ingénierie industrielle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="#top" aria-label="MekIndustrie accueil"><img src="{% static 'references/logo.png' %}" alt="MekIndustrie"></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+  <span></span><span></span><span></span>
+</button>
+<nav class="main-nav" aria-label="Navigation principale">
+<a href="#top">{% trans "Accueil" %}</a>
+<a href="{% url 'about' %}">{% trans "À propos" %}</a>
+<a href="{% url 'contact' %}">{% trans "Contact" %}</a>
+<a href="#produits">{% trans "Produits" %}</a>
+</nav>
+<div class="header-right">
+  <form action="{% url 'set_language' %}" method="post" class="language-switcher">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+    <button type="submit" name="language" value="fr" class="lang-btn {% if LANGUAGE_CODE == 'fr' %}active{% endif %}" aria-label="Français"><img src="{% static 'images/france-svgrepo-com.png' %}" alt="Français"></button>
+    <button type="submit" name="language" value="en" class="lang-btn {% if LANGUAGE_CODE == 'en' %}active{% endif %}" aria-label="English"><img src="{% static 'images/flag-for-flag-united-kingdom-svgrepo-com.png' %}" alt="English"></button>
+  </form>
+  <a class="header-cta" href="{% url 'contact' %}">{% trans "Contactez-nous" %} <span>→</span></a>
+</div>
+</header>
+
+<main id="top">
+    <section class="hero-slider is-ready" aria-label="Présentation de MekIndustrie">
+        <div class="slides" aria-live="polite">
+            <article class="slide active" data-title="Conception optimisée" data-description="Des conceptions mécaniques intelligentes et sur mesure, pensées pour maximiser l’efficacité, la précision et la durabilité de vos équipements." style="--slide-image: url('{% static 'images/first one.jpeg' %}')"></article>
+            <article class="slide" data-title="Performance accrue" data-description="Des solutions mécaniques performantes, conçues pour améliorer la productivité, réduire les pertes et garantir un fonctionnement fiable." style="--slide-image: url('{% static 'images/second one.jpg' %}')"></article>
+            <article class="slide" data-title="Innovation mécanique" data-description="Des technologies et approches innovantes pour répondre aux défis industriels et développer des systèmes mécaniques plus efficaces et durables." style="--slide-image: url('{% static 'images/3one.jpg' %}')"></article>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-dots" aria-label="Indicateurs de slide">
+            <button class="dot active" type="button" aria-label="Afficher le slide 1" data-slide="0"></button>
+            <button class="dot" type="button" aria-label="Afficher le slide 2" data-slide="1"></button>
+            <button class="dot" type="button" aria-label="Afficher le slide 3" data-slide="2"></button>
+        </div>
+
+        <div class="hero-controls" aria-label="Contrôles du carrousel">
+            <button class="nav-arrow" type="button" aria-label="Slide précédent" data-direction="prev">←</button>
+            <button class="nav-arrow" type="button" aria-label="Slide suivant" data-direction="next">→</button>
+        </div>
+
+        <div class="hero-content" aria-live="polite">
+            <p class="eyebrow"><span></span> {% trans "Ingénierie & fabrication industrielle" %}</p>
+            <h1>{% trans "Conception optimisée" %}</h1>
+            <p class="hero-copy">{% trans "Des conceptions mécaniques intelligentes et sur mesure, pensées pour maximiser l’efficacité, la précision et la durabilité de vos équipements." %}</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="#expertise">{% trans "En savoir plus" %} <span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise section-wrap reveal" id="expertise">
+        <div class="section-kicker">01 <span>Notre expertise</span></div>
+        <div>
+            <h2>Une maîtrise complète<br>de la chaîne <em>industrielle.</em></h2>
+            <p class="lead">Nous réunissons les métiers et les compétences pour concevoir des équipements qui font avancer votre production.</p>
+            <div class="expertise-stats">
+                <div class="reveal"><strong>12<span>+</span></strong><small>Années d'expérience</small></div>
+                <div class="reveal"><strong>150<span>+</span></strong><small>Projets livrés</small></div>
+                <div class="reveal"><strong>40<span>+</span></strong><small>Clients accompagnés</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section section-wrap reveal" id="produits">
+        <div class="services-head">
+            <div>
+                <div class="section-kicker">02 <span>Nos savoir-faire</span></div>
+                <h2>Cinq expertises,<br>une seule <em>exigence.</em></h2>
+            </div>
+            <p class="lead">Du bureau d'études à l'atelier, nous couvrons l'ensemble du cycle de vie de vos équipements industriels.</p>
+        </div>
+
+        <div class="services-bento">
+            <article class="service-card service-featured reveal">
+                <div class="service-card-top"><span class="service-index">01</span></div>
+                <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17"/><line x1="3.5" y1="12" x2="20.5" y2="12"/><line x1="12" y1="3.5" x2="12" y2="20.5"/></svg>
+                </div>
+                <h3>Structures<br>aluminium</h3>
+                <p>Conception et assemblage de structures modulaires, protectrices et ergonomiques.</p>
+                <div class="service-meter"><span style="--meter: 95%"></span></div>
+                <small class="service-meter-label">Maîtrise <b>95%</b></small>
+                <a href="{% url 'contact' %}">En savoir plus <span>↗</span></a>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-card-top"><span class="service-index">02</span></div>
+                <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2.4M12 18.1v2.4M20.5 12h-2.4M5.9 12H3.5M17.7 6.3l-1.7 1.7M8 16l-1.7 1.7M17.7 17.7 16 16M8 8 6.3 6.3"/></svg>
+                </div>
+                <h3>Machines<br>spéciales</h3>
+                <p>Des machines sur mesure pensées pour vos cadences et vos contraintes métier.</p>
+                <div class="service-meter"><span style="--meter: 98%"></span></div>
+                <small class="service-meter-label">Maîtrise <b>98%</b></small>
+                <a href="{% url 'contact' %}">En savoir plus <span>↗</span></a>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-card-top"><span class="service-index">03</span></div>
+                <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2"/><line x1="12" y1="2" x2="12" y2="5.5"/><line x1="12" y1="18.5" x2="12" y2="22"/><line x1="2" y1="12" x2="5.5" y2="12"/><line x1="18.5" y1="12" x2="22" y2="12"/></svg>
+                </div>
+                <h3>Centre<br>d'usinage</h3>
+                <p>Usinage de précision, prototypage et petites séries avec une exigence constante.</p>
+                <div class="service-meter"><span style="--meter: 92%"></span></div>
+                <small class="service-meter-label">Maîtrise <b>92%</b></small>
+                <a href="{% url 'contact' %}">En savoir plus <span>↗</span></a>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-card-top"><span class="service-index">04</span></div>
+                <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="7" y="7" width="10" height="10" rx="1.2"/><line x1="12" y1="2" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="22"/><line x1="2" y1="12" x2="7" y2="12"/><line x1="17" y1="12" x2="22" y2="12"/></svg>
+                </div>
+                <h3>Automatisme<br>industriel</h3>
+                <p>Automatisation, supervision et intégration pour gagner en performance.</p>
+                <div class="service-meter"><span style="--meter: 90%"></span></div>
+                <small class="service-meter-label">Maîtrise <b>90%</b></small>
+                <a href="{% url 'contact' %}">En savoir plus <span>↗</span></a>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-card-top"><span class="service-index">05</span></div>
+                <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </div>
+                <h3>Outillage & pièces<br>de rechange</h3>
+                <p>La disponibilité des pièces essentielles pour maintenir votre activité.</p>
+                <div class="service-meter"><span style="--meter: 97%"></span></div>
+                <small class="service-meter-label">Maîtrise <b>97%</b></small>
+                <a href="{% url 'contact' %}">En savoir plus <span>↗</span></a>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="references section-wrap reveal" id="references"><div class="section-kicker">04 <span>Ils nous font confiance</span></div><div class="references-head"><h2>Des projets qui<br>parlent <em>pour nous.</em></h2><p>Chaque collaboration est une occasion de rendre l'industrie plus fluide, plus sûre et plus humaine.</p></div><div class="reference-grid">
+        <div class="reference large reveal">
+            <div class="reference-inner">
+                <div class="reference-face reference-front">
+                    <span>Projet 01 / Ligne de production</span>
+                    <strong>Optimisation<br>de cadence</strong>
+                </div>
+                <div class="reference-face reference-back">
+                    <span class="result-label">Résultat client</span>
+                    <strong class="result-number">+35<em>%</em></strong>
+                    <p>de cadence de production après refonte complète de la ligne d'assemblage.</p>
+                    <a href="{% url 'contact' %}">Voir le projet <span>↗</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="reference reveal">
+            <div class="reference-inner">
+                <div class="reference-face reference-front">
+                    <span>Projet 02 / Outillage</span>
+                    <strong>Geste<br>simplifié</strong>
+                </div>
+                <div class="reference-face reference-back">
+                    <span class="result-label">Résultat client</span>
+                    <strong class="result-number">-22<em>%</em></strong>
+                    <p>de temps d'arrêt machine grâce à un outillage repensé et standardisé.</p>
+                    <a href="{% url 'contact' %}">Voir le projet <span>↗</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="reference reveal">
+            <div class="reference-inner">
+                <div class="reference-face reference-front">
+                    <span>Projet 03 / Automatisme</span>
+                    <strong>Flux<br>maîtrisé</strong>
+                </div>
+                <div class="reference-face reference-back">
+                    <span class="result-label">Résultat client</span>
+                    <strong class="result-number">+40<em>%</em></strong>
+                    <p>de flux piloté en temps réel après intégration de la supervision.</p>
+                    <a href="{% url 'contact' %}">Voir le projet <span>↗</span></a>
+                </div>
+            </div>
+        </div>
+    </div></section>
+
+    <section class="location section-wrap reveal" id="localisation">
+        <div class="location-copy">
+            <div class="section-kicker">05 <span>Nous trouver</span></div>
+            <h2>Au cœur de<br><em>l'action.</em></h2>
+            <p>Venez rencontrer notre équipe et découvrir notre environnement industriel à Tanger.</p>
+            <div class="location-address">
+                <span class="location-pin">+</span>
+                <div>
+                    <small>Notre adresse</small>
+                    <strong>Z.I. Al Majd, Rue Riyad N°261 lot 890<br>Tanger 90060, Maroc</strong>
+                </div>
+            </div>
+            <div class="location-coords">
+                <span class="coords-label">Coordonnées GPS</span>
+                <span class="coords-value">35.7370° N, 5.7982° O</span>
+            </div>
+            <a class="button button-light" href="https://maps.app.goo.gl/CUq8oSoUPJp6wWNWA" target="_blank" rel="noopener">Ouvrir dans Google Maps <span>↗</span></a>
+        </div>
+        <div class="location-map reveal">
+            <div class="map-label">MEKINDUSTRIE <span>• TANGER</span></div>
+            <iframe title="Localisation de MekIndustrie à Tanger" src="https://www.google.com/maps?q=35.7370531,-5.7982974&z=18&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-scanline" aria-hidden="true"></div>
+            <div class="map-radar" aria-hidden="true">
+                <span class="radar-ring"></span>
+                <span class="radar-ring"></span>
+                <span class="radar-ring"></span>
+                <span class="radar-dot"></span>
+            </div>
+        </div>
+    </section>
+<section class="contact-references reveal">
+  <div class="section-wrap">
+    <div class="section-kicker">05 <span>{% trans "Nos références" %}</span></div>
+    <div class="reference-marquee" aria-label="Nos références clients">
+      <div class="reference-track">
+        <div class="reference-group">
+          <img class="reference-logo" src="{% static 'references/alominium de maroc.png' %}" alt="Aluminium de Maroc">
+          <img class="reference-logo" src="{% static 'references/bamesa.jpg' %}" alt="Bamesa">
+          <img class="reference-logo" src="{% static 'references/ecol rental.png' %}" alt="Ecol Rental">
+          <img class="reference-logo" src="{% static 'references/electrical.jpg' %}" alt="Electrical">
+          <img class="reference-logo" src="{% static 'references/klaas-puul-since-1968.jpg' %}" alt="Klaas Puul">
+          <img class="reference-logo" src="{% static 'references/logo-industube-small.png' %}" alt="Industube">
+          <img class="reference-logo" src="{% static 'references/logo-plastex-1-500x128.png' %}" alt="Plastex">
+          <img class="reference-logo" src="{% static 'references/logo-prettl.webp' %}" alt="Prettl">
+        </div>
+        <div class="reference-group" aria-hidden="true">
+          <img class="reference-logo" src="{% static 'references/alominium de maroc.png' %}" alt="Aluminium de Maroc">
+          <img class="reference-logo" src="{% static 'references/bamesa.jpg' %}" alt="Bamesa">
+          <img class="reference-logo" src="{% static 'references/ecol rental.png' %}" alt="Ecol Rental">
+          <img class="reference-logo" src="{% static 'references/electrical.jpg' %}" alt="Electrical">
+          <img class="reference-logo" src="{% static 'references/klaas-puul-since-1968.jpg' %}" alt="Klaas Puul">
+          <img class="reference-logo" src="{% static 'references/logo-industube-small.png' %}" alt="Industube">
+          <img class="reference-logo" src="{% static 'references/logo-plastex-1-500x128.png' %}" alt="Plastex">
+          <img class="reference-logo" src="{% static 'references/logo-prettl.webp' %}" alt="Prettl">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a class="brand" href="#top"><img src="{% static 'references/logo.png' %}" alt="MekIndustrie"></a>
+            <p class="footer-copy">Ingénierie industrielle, avec précision. Nous concevons des solutions robustes, fiables et pensées pour la performance de vos installations.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <div class="footer-links">
+                <a href="#top">Accueil</a>
+                <a href="#produits">Produits</a>
+                <a href="#methode">Méthode</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="footer-contact">
+                <a href="tel:+213555123456">+213 (0) 555 12 34 56</a>
+                <a href="mailto:contact@mekindustrie.dz">contact@mekindustrie.dz</a>
+                <p>Z.I. Al Majd, Rue Riyad N°261 lot 890, Tanger 90060</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2025 MekIndustrie</span>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    const navButtons = Array.from(document.querySelectorAll('.nav-arrow'));
+    const heroContent = document.querySelector('.hero-content');
+    const heroTitle = document.querySelector('.hero-content h1');
+    const heroCopy = document.querySelector('.hero-content .hero-copy');
+    let currentSlide = 0;
+    let autoPlayId;
+
+    function animateText() {
+        if (!heroContent) return;
+        heroContent.classList.remove('is-animating');
+        void heroContent.offsetWidth;
+        heroContent.classList.add('is-animating');
+    }
+
+    function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === currentSlide);
+        });
+
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentSlide);
+            dot.setAttribute('aria-current', idx === currentSlide ? 'true' : 'false');
+        });
+
+        if (heroTitle && heroCopy) {
+            const activeSlide = slides[currentSlide];
+            const title = activeSlide?.dataset.title || heroTitle.textContent;
+            const description = activeSlide?.dataset.description || heroCopy.textContent;
+
+            heroTitle.classList.remove('animate-in');
+            heroCopy.classList.remove('animate-in');
+            void heroTitle.offsetWidth;
+            void heroCopy.offsetWidth;
+
+            heroTitle.textContent = title;
+            heroCopy.textContent = description;
+
+            requestAnimationFrame(() => {
+                heroTitle.classList.add('animate-in');
+                heroCopy.classList.add('animate-in');
+            });
+        }
+
+        animateText();
+    }
+
+    function startAutoPlay() {
+        clearInterval(autoPlayId);
+        autoPlayId = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+    }
+
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            showSlide(Number(dot.dataset.slide));
+            startAutoPlay();
+        });
+    });
+
+    navButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.direction === 'next' ? 1 : -1;
+            showSlide(currentSlide + direction);
+            startAutoPlay();
+        });
+    });
+
+    // Scroll animation for header with enhanced effects
+    const siteHeader = document.querySelector('.site-header');
+    const mainNav = document.querySelector('.main-nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const brand = document.querySelector('.brand');
+    const navLinks = Array.from(document.querySelectorAll('.main-nav a'));
+    let ticking = false;
+    let lastScrollY = 0;
+
+    if (navToggle && mainNav) {
+        const closeMenu = () => {
+            siteHeader.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = siteHeader.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        mainNav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (siteHeader && !siteHeader.contains(event.target)) {
+                closeMenu();
+            }
+        });
+    }
+
+    function updateHeaderOnScroll() {
+        const scrollY = window.scrollY;
+        const scrollDirection = scrollY > lastScrollY ? 'down' : 'up';
+        lastScrollY = scrollY;
+
+        if (scrollY > 20) {
+            if (!siteHeader.classList.contains('is-scrolled')) {
+                siteHeader.classList.add('is-scrolled');
+                // Staggered nav link animations
+                navLinks.forEach((link, idx) => {
+                    setTimeout(() => {
+                        link.style.transition = 'all .3s ease';
+                    }, idx * 30);
+                });
+            }
+        } else {
+            if (siteHeader.classList.contains('is-scrolled')) {
+                siteHeader.classList.remove('is-scrolled');
+                navLinks.forEach((link) => {
+                    link.style.transition = 'all .3s ease';
+                });
+            }
+        }
+        ticking = false;
+    }
+
+    const revealItems = document.querySelectorAll('.reveal, .reveal-up, .reveal-contact');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+    } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeaderOnScroll);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    window.addEventListener('load', () => {
+        const heroSlider = document.querySelector('.hero-slider');
+        if (heroSlider) {
+            heroSlider.classList.add('is-loaded');
+        }
+        animateText();
+        startAutoPlay();
+    });
+</script>
+
+</body>
+</html>
