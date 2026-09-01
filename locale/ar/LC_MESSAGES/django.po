@@ -1,0 +1,184 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MekIndustrie\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Accueil"
+msgstr "الرئيسية"
+
+msgid "À propos"
+msgstr "من نحن"
+
+msgid "Produits"
+msgstr "المنتجات"
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid "Contactez-nous"
+msgstr "تواصل معنا"
+
+msgid "Ingénierie & fabrication industrielle"
+msgstr "الهندسة والتصنيع الصناعي"
+
+msgid "Conception optimisée"
+msgstr "تصميم مُحسّن"
+
+msgid "Des conceptions mécaniques intelligentes et sur mesure, pensées pour maximiser l’efficacité, la précision et la durabilité de vos équipements."
+msgstr "تصاميم ميكانيكية ذكية ومخصصة مصممة لتعظيم الكفاءة والدقة والمتانة في معداتك."
+
+msgid "En savoir plus"
+msgstr "معرفة المزيد"
+
+msgid "Parlons de votre projet"
+msgstr "دعنا نتحدث عن مشروعك"
+
+msgid "Un besoin."
+msgstr "حاجة."
+
+msgid "Une"
+msgstr "حل"
+
+msgid "solution."
+msgstr "مناسب."
+
+msgid "Chaque projet commence par une conversation. Expliquez-nous votre contexte, nous vous aiderons à trouver la voie la plus juste."
+msgstr "يبدأ كل مشروع بحوار. أخبرنا عن سياقك وسنساعدك في إيجاد المسار الأنسب."
+
+msgid "Nos références"
+msgstr "مراجعنا"
+
+msgid "Nous sommes à votre écoute"
+msgstr "نحن نستمع إليك"
+
+msgid "Construisons"
+msgstr "لنُبني"
+
+msgid "la suite"
+msgstr "الخطوة التالية"
+
+msgid "ensemble."
+msgstr "معًا."
+
+msgid "Notre équipe vous répond sous 48 heures pour qualifier votre besoin et vous proposer un premier échange."
+msgstr "يستجيب فريقنا خلال 48 ساعة لتقييم احتياجك وتقديم أول حوار."
+
+msgid "Téléphone"
+msgstr "الهاتف"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Atelier"
+msgstr "المصنع"
+
+msgid "Votre projet"
+msgstr "مشروعك"
+
+msgid "Étape"
+msgstr "الخطوة"
+
+msgid "Votre nom"
+msgstr "اسمك"
+
+msgid "Nom et prénom"
+msgstr "الاسم الكامل"
+
+msgid "Votre email"
+msgstr "بريدك الإلكتروني"
+
+msgid "Votre entreprise"
+msgstr "شركتك"
+
+msgid "Nom de votre entreprise"
+msgstr "اسم شركتك"
+
+msgid "Votre message"
+msgstr "رسالتك"
+
+msgid "Parlez-nous de votre besoin, de vos délais et de vos objectifs..."
+msgstr "أخبرنا عن حاجتك ومواعيدك وأهدافك..."
+
+msgid "Envoyer ma demande"
+msgstr "إرسال طلبي"
+
+msgid "Vos informations restent confidentielles et sont utilisées uniquement pour vous répondre."
+msgstr "تظل معلوماتك سرية وتستخدم فقط للرد عليك."
+
+msgid "Notre expertise"
+msgstr "خبرتنا"
+
+msgid "Une maîtrise complète"
+msgstr "إتقان كامل"
+
+msgid "de la chaîne"
+msgstr "لسلسلة"
+
+msgid "industrielle."
+msgstr "الصناعية."
+
+msgid "Nous réunissons les métiers et les compétences pour concevoir des équipements qui font avancer votre production."
+msgstr "نجمع بين المهارات والخبرات لتصميم معدات تدفع إنتاجك إلى الأمام."
+
+msgid "Années d'expérience"
+msgstr "سنوات من الخبرة"
+
+msgid "Projets livrés"
+msgstr "مشاريع منجزة"
+
+msgid "Clients accompagnés"
+msgstr "عملاء تم دعمهم"
+
+msgid "Nos savoir-faire"
+msgstr "مهاراتنا"
+
+msgid "Cinq expertises,"
+msgstr "خمس خبرات،"
+
+msgid "une seule"
+msgstr "معيار واحد"
+
+msgid "exigence."
+msgstr "فقط."
+
+msgid "Du bureau d'études à l'atelier, nous couvrons l'ensemble du cycle de vie de vos équipements industriels."
+msgstr "من مكتب التصميم إلى الورشة، نغطي كامل دورة حياة معداتك الصناعية."
+
+msgid "Ils nous font confiance"
+msgstr "يثقون بنا"
+
+msgid "Des projets qui"
+msgstr "مشاريع"
+
+msgid "parlent"
+msgstr "تتحدث"
+
+msgid "pour nous."
+msgstr "لصالحنا."
+
+msgid "Chaque collaboration est une occasion de rendre l'industrie plus fluide, plus sûre et plus humaine."
+msgstr "كل تعاون هو فرصة لجعل الصناعة أكثر سلاسة وأمانًا وإنسانية."
+
+msgid "Nous trouver"
+msgstr "أين نجدنا"
+
+msgid "Au cœur de"
+msgstr "في قلب"
+
+msgid "l'action."
+msgstr "العمل."
+
+msgid "Venez rencontrer notre équipe et découvrir notre environnement industriel à Tanger."
+msgstr "زور فريقنا واكتشف بيئتنا الصناعية في طنجة."
+
+msgid "Notre adresse"
+msgstr "عنواننا"
+
+msgid "Coordonnées GPS"
+msgstr "إحداثيات GPS"
+
+msgid "Ouvrir dans Google Maps"
+msgstr "فتح في خرائط Google"

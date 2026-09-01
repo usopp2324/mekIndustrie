@@ -1,0 +1,202 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MekIndustrie\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "À propos"
+msgstr "About"
+
+msgid "Produits"
+msgstr "Products"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Contactez-nous"
+msgstr "Contact us"
+
+msgid "Ingénierie & fabrication industrielle"
+msgstr "Industrial engineering & manufacturing"
+
+msgid "Conception optimisée"
+msgstr "Optimized design"
+
+msgid "Des conceptions mécaniques intelligentes et sur mesure, pensées pour maximiser l’efficacité, la précision et la durabilité de vos équipements."
+msgstr "Smart, custom mechanical designs engineered to maximize efficiency, precision, and durability of your equipment."
+
+msgid "En savoir plus"
+msgstr "Learn more"
+
+msgid "Parlons de votre projet"
+msgstr "Let’s talk about your project"
+
+msgid "Un besoin."
+msgstr "A need."
+
+msgid "Une"
+msgstr "A"
+
+msgid "solution."
+msgstr "solution."
+
+msgid "Chaque projet commence par une conversation. Expliquez-nous votre contexte, nous vous aiderons à trouver la voie la plus juste."
+msgstr "Every project starts with a conversation. Tell us about your context and we will help you find the most suitable path."
+
+msgid "Nos références"
+msgstr "Our references"
+
+msgid "Nous sommes à votre écoute"
+msgstr "We are here to listen"
+
+msgid "Construisons"
+msgstr "Let’s build"
+
+msgid "la suite"
+msgstr "the next step"
+
+msgid "ensemble."
+msgstr "together."
+
+msgid "Notre équipe vous répond sous 48 heures pour qualifier votre besoin et vous proposer un premier échange."
+msgstr "Our team responds within 48 hours to qualify your needs and offer an initial discussion."
+
+msgid "Téléphone"
+msgstr "Phone"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Atelier"
+msgstr "Workshop"
+
+msgid "Votre projet"
+msgstr "Your project"
+
+msgid "Étape"
+msgstr "Step"
+
+msgid "Votre nom"
+msgstr "Your name"
+
+msgid "Nom et prénom"
+msgstr "Full name"
+
+msgid "Votre email"
+msgstr "Your email"
+
+msgid "Votre entreprise"
+msgstr "Your company"
+
+msgid "Nom de votre entreprise"
+msgstr "Your company name"
+
+msgid "Votre message"
+msgstr "Your message"
+
+msgid "Parlez-nous de votre besoin, de vos délais et de vos objectifs..."
+msgstr "Tell us about your need, timeline, and goals..."
+
+msgid "Envoyer ma demande"
+msgstr "Send my request"
+
+msgid "Vos informations restent confidentielles et sont utilisées uniquement pour vous répondre."
+msgstr "Your information remains confidential and is used only to respond to you."
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "À propos"
+msgstr "About"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Produits"
+msgstr "Products"
+
+msgid "Notre expertise"
+msgstr "Our expertise"
+
+msgid "Une maîtrise complète"
+msgstr "Full mastery"
+
+msgid "de la chaîne"
+msgstr "of the industrial chain"
+
+msgid "industrielle."
+msgstr "industry."
+
+msgid "Nous réunissons les métiers et les compétences pour concevoir des équipements qui font avancer votre production."
+msgstr "We bring together the trades and skills needed to design equipment that keeps your production moving forward."
+
+msgid "12"
+msgstr "12"
+
+msgid "+"
+msgstr "+"
+
+msgid "Années d'expérience"
+msgstr "Years of experience"
+
+msgid "Projets livrés"
+msgstr "Projects delivered"
+
+msgid "Clients accompagnés"
+msgstr "Clients supported"
+
+msgid "Nos savoir-faire"
+msgstr "Our expertise"
+
+msgid "Cinq expertises,"
+msgstr "Five areas of expertise,"
+
+msgid "une seule"
+msgstr "one single"
+
+msgid "exigence."
+msgstr "standard."
+
+msgid "Du bureau d'études à l'atelier, nous couvrons l'ensemble du cycle de vie de vos équipements industriels."
+msgstr "From design office to workshop, we cover the full lifecycle of your industrial equipment."
+
+msgid "Ils nous font confiance"
+msgstr "They trust us"
+
+msgid "Des projets qui"
+msgstr "Projects that"
+
+msgid "parlent"
+msgstr "speak"
+
+msgid "pour nous."
+msgstr "for us."
+
+msgid "Chaque collaboration est une occasion de rendre l'industrie plus fluide, plus sûre et plus humaine."
+msgstr "Each collaboration is an opportunity to make industry smoother, safer, and more human."
+
+msgid "Nous trouver"
+msgstr "Find us"
+
+msgid "Au cœur de"
+msgstr "At the heart of"
+
+msgid "l'action."
+msgstr "the action."
+
+msgid "Venez rencontrer notre équipe et découvrir notre environnement industriel à Tanger."
+msgstr "Visit our team and discover our industrial environment in Tangier."
+
+msgid "Notre adresse"
+msgstr "Our address"
+
+msgid "Coordonnées GPS"
+msgstr "GPS coordinates"
+
+msgid "Ouvrir dans Google Maps"
+msgstr "Open in Google Maps"
